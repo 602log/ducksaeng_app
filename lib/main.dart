@@ -2,6 +2,7 @@ import 'package:ducksaeng_app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   // 앱 실행 전 프레임워크 초기화
@@ -20,20 +21,31 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       // debug banner
       debugShowCheckedModeBanner: false,
-
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
-    );
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          color: Colors.white,
+        ),
+        scaffoldBackgroundColor: Colors.white,
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            fontFamily: GoogleFonts.kodeMono().fontFamily,
+            color: Colors.black,
+            fontSize: 24,
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
+            fontSize: 13,
+            color: Colors.black,
+            fontWeight: FontWeight.w400,
 
-    // return MaterialApp(
-    //   // debug banner
-    //   debugShowCheckedModeBanner: false,
-    //   title: 'ducksaeng',
-    //   theme: ThemeData(
-    //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-    //     useMaterial3: true,
-    //   ),
-    //   home: const HomeScreenTest(),
-    // );
+          ),
+
+        )
+
+
+      ),
+    );
   }
 }
