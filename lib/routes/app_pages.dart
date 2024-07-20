@@ -13,6 +13,7 @@ class AppPages {
       name: Routes.HOME,
       page: () => const HomeScreen(),
       binding: HomeBinding(),
+      transitionDuration: const Duration(microseconds: 300),
     ),
   ];
 }

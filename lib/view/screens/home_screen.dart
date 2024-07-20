@@ -1,3 +1,7 @@
+import 'package:ducksaeng_app/routes/app_routes.dart';
+import 'package:ducksaeng_app/view/components/custom_tabs.dart';
+import 'package:ducksaeng_app/view/components/main_app_bar.dart';
+import 'package:ducksaeng_app/view/components/search_text_form_field.dart';
 import 'package:ducksaeng_app/viewModel/home_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,19 +16,7 @@ class HomeScreen extends GetView<HomeController> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
-              child: Text(
-                'DUCKSAENG',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-          ],
-        ),
+        title: MainAppBar(),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
@@ -38,132 +30,18 @@ class HomeScreen extends GetView<HomeController> {
               height: 16,
             ),
 
-            TextFormField(
-              style: Theme.of(context).textTheme.bodyMedium,
-              cursorColor: Colors.black,
-              decoration: InputDecoration(
-                contentPadding: const EdgeInsets.all(15),
-                labelText: '검색',
-                labelStyle: Theme.of(context).textTheme.bodyMedium,
-                // icon: const Icon(Icons.search,),
-                focusedBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                ),
-                border: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                ),
-                suffixIcon: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.search,
-                  ),
-                  color: Colors.black,
-                ),
-              ),
+            // 검색 text form field
+            SearchTextFormField(
+              callback: () {},
             ),
 
             const SizedBox(
               height: 16,
             ),
 
-            // tabs
             Expanded(
-              flex: 1,
-              child: SizedBox(
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: controller.tabs.value.length,
-                  physics: BouncingScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {
-                        controller.current.value = index;
-                      },
-                      child: Obx(
-                        () => Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal:
-                                controller.current.value == index ? 25 : 20,
-                          ),
-                          decoration: BoxDecoration(
-                              color: index == 0
-                                  ? Colors.grey.shade100
-                                  : Colors.grey.shade300,
-                              borderRadius: const BorderRadius.only(
-                                topRight: Radius.circular(20),
-                                topLeft: Radius.circular(20),
-                              )),
-                          child: Row(
-                            children: [
-                              Text(
-                                style: TextStyle(
-                                  // color: Colors.black,
-                                  fontSize: controller.current.value == index
-                                      ? 16
-                                      : 13,
-                                  fontWeight: controller.current.value == index
-                                      ? FontWeight.w400
-                                      : FontWeight.w200,
-                                ),
-                                controller.tabs[index],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ),
-            ),
+              child: CustomTabs(tabLength: 2, tabColorList: [Colors.grey.shade100, Colors.grey.shade300], tabTitleList: controller.tabs, widgetList: [],
 
-            // 지도 / 리스트 보기
-            Expanded(
-              flex: 15,
-              child: Obx(
-                () {
-                  return Row(
-                    children: [
-                      controller.current.value == 0
-                          ? Expanded(
-                              child: Container(
-                                padding: const EdgeInsets.all(16),
-                                height: size.height,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey.shade100,
-                                ),
-                                child: Container(
-                                  // decoration: const BoxDecoration(
-                                  //   color: Colors.black,
-                                  // ),
-                                  child: const Text(
-                                    'dd',
-                                  ),
-                                ),
-                              ),
-                            )
-                          : Expanded(
-                              child: Container(
-                                padding: const EdgeInsets.all(16),
-                                height: size.height,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey.shade300,
-                                ),
-                                child: Container(
-                                  child: Card(
-                                    color: Colors.white,
-                                    child: Text('dd'),
-                                  ),
-                                ),
-                              ),
-                            )
-                    ],
-                  );
-                },
               ),
             ),
           ],

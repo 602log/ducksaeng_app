@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         textTheme: TextTheme(
           titleLarge: TextStyle(
-            fontFamily: GoogleFonts.kodeMono().fontFamily,
+            fontFamily: GoogleFonts.permanentMarker().fontFamily,
+            fontWeight: FontWeight.w500,
             color: Colors.black,
             fontSize: 24,
           ),
@@ -39,7 +40,12 @@ class MyApp extends StatelessWidget {
             fontSize: 13,
             color: Colors.black,
             fontWeight: FontWeight.w400,
-
+          ),
+          titleSmall: TextStyle(
+            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
+            fontWeight: FontWeight.w500,
+            color: Colors.black,
+            fontSize: 10,
           ),
 
         )
