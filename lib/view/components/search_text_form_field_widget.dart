@@ -1,14 +1,15 @@
+import 'package:ducksaeng_app/viewModel/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
 /// 검색 조회 form field
 /// callback : IconButton onPressed
-class SearchTextFormField extends GetWidget {
+class SearchTextFormFieldWidget extends GetWidget<HomeController> {
 
   VoidCallback callback;
 
-  SearchTextFormField({
+  SearchTextFormFieldWidget({
     super.key,
     required this.callback,
   });

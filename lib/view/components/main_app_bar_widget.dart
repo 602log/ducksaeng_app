@@ -1,9 +1,10 @@
 import 'package:ducksaeng_app/routes/app_routes.dart';
+import 'package:ducksaeng_app/viewModel/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 /// custom app bar (main 용)
-class MainAppBar extends GetWidget{
+class MainAppBarWidget extends GetWidget<HomeController> {
 
   @override
   Widget build(BuildContext context) {
