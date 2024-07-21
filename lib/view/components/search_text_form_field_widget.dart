@@ -41,15 +41,16 @@ class SearchTextFormFieldWidget extends GetWidget<HomeController> {
           ),
           borderSide: BorderSide(
             width: 1.5,
-          )
+          ),
         ),
+
         enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(25.0),
             ),
             borderSide: BorderSide(
               width: 1.5,
-            )
+            ),
         ),
         suffixIcon: IconButton(
           onPressed: callback,

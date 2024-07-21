@@ -36,6 +36,7 @@ class HomeScreen extends GetView<HomeController> {
                         children: [
 
                           // 최애 사진 슬라이더
+                          // todo: 최애 등록이 없는 경우 빈 칸 표출, 최애 사진 누르면 생일 리스트 조회 페이지로 이동
                           Expanded(
                             flex: 3,
                             child: CarouselSlider(
