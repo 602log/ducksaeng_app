@@ -1,5 +1,7 @@
+import 'package:ducksaeng_app/routes/app_routes.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // todo: 이모티콘, 글씨, 동그라미+이모티콘, 이모티콘+글씨 중 선택
 // todo: 선택한 메뉴 다른 색으로 활성화 표기할 것
@@ -57,18 +59,23 @@ class CustomButtomNavigationBar extends StatelessWidget {
           // ),
 
           // 아이콘 + 글씨
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.cake,
-                color: Colors.black,
-              ),
-              Text(
-                '생일카페',
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-            ],
+          InkWell(
+            onTap: (){
+              Get.toNamed(Routes.EVENT);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.cake,
+                  color: Colors.black,
+                ),
+                Text(
+                  '생일카페',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

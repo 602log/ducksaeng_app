@@ -34,4 +34,16 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
     super.onInit();
     imgWidget = imgList.map((e) => ImageSliderWidget(imgItem: e,),).toList();
   }
+
+  @override
+  void refresh() {
+    // TODO: implement refresh
+    super.refresh();
+  }
+
+  @override
+  void onClose() {
+    // TODO: implement onClose
+    super.onClose();
+  }
 }
