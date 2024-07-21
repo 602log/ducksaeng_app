@@ -1,6 +1,8 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
+// todo: 이모티콘, 글씨, 동그라미+이모티콘, 이모티콘+글씨 중 선택
+// todo: 선택한 메뉴 다른 색으로 활성화 표기할 것
 /// bottom navigation bar
 class CustomButtomNavigationBar extends StatelessWidget {
   const CustomButtomNavigationBar({super.key});
@@ -21,22 +23,124 @@ class CustomButtomNavigationBar extends StatelessWidget {
               offset: const Offset(0, 3),
             )
           ]),
-      child: const Row(
+      child:
+      Row(
         mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Icon(
-            Icons.home,
-            color: Colors.black,
+          // 이모티콘
+          // Icon(
+          //   Icons.cake,
+          //   color: Colors.black,
+          // ),
+          // Icon(
+          //   Icons.smart_button,
+          //   color: Colors.black,
+          // ),
+          // Icon(
+          //   Icons.favorite,
+          //   color: Colors.black,
+          // ),
+
+          // 글씨
+          // Text(
+          //   '생일카페',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   '생일광고',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   '최애',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+
+          // 아이콘 + 글씨
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.cake,
+                color: Colors.black,
+              ),
+              Text(
+                '생일카페',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ],
           ),
-          Icon(
-            Icons.home,
-            color: Colors.black,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.smart_button,
+                color: Colors.black,
+              ),
+              Text(
+                '생일광고',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ],
           ),
-          Icon(
-            Icons.home,
-            color: Colors.black,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.favorite,
+                color: Colors.black,
+              ),
+              Text(
+                '최애',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ],
           ),
+
+          // 동그라미 + 이모티콘
+          // Container(
+          //   padding: EdgeInsets.all(5),
+          //   decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(45),
+          //       border: Border.all(
+          //         color: Colors.black,
+          //         width: 1,
+          //       )
+          //   ),
+          //   child: Icon(
+          //     Icons.cake,
+          //     color: Colors.black,
+          //   ),
+          // ),
+          // Container(
+          //   padding: EdgeInsets.all(5),
+          //   decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(45),
+          //       border: Border.all(
+          //         color: Colors.black,
+          //         width: 1,
+          //       )
+          //   ),
+          //   child: Icon(
+          //     Icons.smart_button,
+          //     color: Colors.black,
+          //   ),
+          // ),
+          //
+          // Container(
+          //   padding: EdgeInsets.all(5),
+          //   decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(45),
+          //       border: Border.all(
+          //         color: Colors.black,
+          //         width: 1,
+          //       )
+          //   ),
+          //   child: Icon(
+          //     Icons.cake,
+          //     color: Colors.black,
+          //   ),
+          // ),
         ],
       ),
     );
