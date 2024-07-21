@@ -20,19 +20,36 @@ class SearchTextFormFieldWidget extends GetWidget<HomeController> {
       style: Theme.of(context).textTheme.bodyMedium,
       cursorColor: Colors.black,
       decoration: InputDecoration(
+
+        fillColor: Colors.white,
+        filled: true,
         contentPadding: const EdgeInsets.all(15),
         labelText: '검색',
         labelStyle: Theme.of(context).textTheme.bodyMedium,
         // icon: const Icon(Icons.search,),
         focusedBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(10.0),
+            Radius.circular(25.0),
           ),
+            borderSide: BorderSide(
+              width: 1.5,
+            ),
         ),
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(10.0),
+            Radius.circular(25.0),
           ),
+          borderSide: BorderSide(
+            width: 1.5,
+          )
+        ),
+        enabledBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(25.0),
+            ),
+            borderSide: BorderSide(
+              width: 1.5,
+            )
         ),
         suffixIcon: IconButton(
           onPressed: callback,
