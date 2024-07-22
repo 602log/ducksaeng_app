@@ -1,4 +1,6 @@
+import 'package:ducksaeng_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 /// 지도 화면 하단 카드 위젯
 class EventMapBottomItem extends StatelessWidget {
@@ -8,7 +10,7 @@ class EventMapBottomItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        print('상세 페이지 이동');
+        Get.toNamed(Routes.EVENT_DETAIL);
       },
       child: Container(
         padding: const EdgeInsets.all(16),

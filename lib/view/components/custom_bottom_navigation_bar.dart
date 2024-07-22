@@ -32,6 +32,10 @@ class CustomButtomNavigationBar extends StatelessWidget {
         children: [
           // 이모티콘
           // Icon(
+          //   Icons.home,
+          //   color: Colors.black,
+          // ),
+          // Icon(
           //   Icons.cake,
           //   color: Colors.black,
           // ),
@@ -46,6 +50,10 @@ class CustomButtomNavigationBar extends StatelessWidget {
 
           // 글씨
           // Text(
+          //   '홈',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
           //   '생일카페',
           //   style: Theme.of(context).textTheme.bodyMedium,
           // ),
@@ -59,6 +67,24 @@ class CustomButtomNavigationBar extends StatelessWidget {
           // ),
 
           // 아이콘 + 글씨
+          InkWell(
+            onTap: (){
+              Get.toNamed(Routes.HOME);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.home,
+                  color: Colors.black,
+                ),
+                Text(
+                  '홈',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
+          ),
           InkWell(
             onTap: (){
               Get.toNamed(Routes.EVENT);
@@ -105,6 +131,19 @@ class CustomButtomNavigationBar extends StatelessWidget {
           ),
 
           // 동그라미 + 이모티콘
+          // Container(
+          //   padding: EdgeInsets.all(5),
+          //   decoration: BoxDecoration(
+          //       borderRadius: BorderRadius.circular(45),
+          //       border: Border.all(
+          //         color: Colors.black,
+          //         width: 1,
+          //       )
+          //   ),
+          //   child: Icon(
+          //     Icons.home,
+          //     color: Colors.black,
+          //   ),
           // Container(
           //   padding: EdgeInsets.all(5),
           //   decoration: BoxDecoration(
