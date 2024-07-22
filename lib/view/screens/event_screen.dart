@@ -28,7 +28,7 @@ class EventScreen extends GetView<EventController> {
       
             // 상단바
             Positioned(
-              top: kToolbarHeight + 16,
+              top: kToolbarHeight,
               left: 16,
               right: 16,
               child: SearchAndNavigationBarWidget(isVisible: true, callBack: (){

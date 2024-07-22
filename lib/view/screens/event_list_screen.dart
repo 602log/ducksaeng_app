@@ -18,7 +18,7 @@ class EventListScreen extends GetView<EventController> {
         backgroundColor: Colors.grey.shade50,
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
             child: Column(
               children: [
 
