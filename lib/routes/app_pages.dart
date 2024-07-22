@@ -1,6 +1,7 @@
 import 'package:ducksaeng_app/bindings/event_binding.dart';
 import 'package:ducksaeng_app/bindings/home_binding.dart';
 import 'package:ducksaeng_app/routes/app_routes.dart';
+import 'package:ducksaeng_app/view/screens/event_list_screen.dart';
 import 'package:ducksaeng_app/view/screens/event_screen.dart';
 import 'package:ducksaeng_app/view/screens/home_screen.dart';
 import 'package:get/get.dart';
@@ -21,6 +22,13 @@ class AppPages {
     GetPage(
       name: Routes.EVENT,
       page: () => EventScreen(),
+      binding: EventBinding(),
+      transitionDuration: const Duration(microseconds: 300),
+    ),
+
+    GetPage(
+      name: Routes.EVENT_LIST,
+      page: () => EventListScreen(),
       binding: EventBinding(),
       transitionDuration: const Duration(microseconds: 300),
     ),

@@ -1,9 +1,9 @@
 import 'package:ducksaeng_app/view/components/image_slider_widget.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
 
+/// 홈 스크린용
 class HomeController extends GetxController with GetSingleTickerProviderStateMixin {
 
   TextTheme? textTheme;
