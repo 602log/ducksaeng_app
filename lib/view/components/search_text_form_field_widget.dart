@@ -5,7 +5,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
-/// 검색 조회 form field
+/// 검색 조회 form field 위젯
 /// callback : IconButton onPressed
 class SearchTextFormFieldWidget extends GetWidget<HomeController> {
 

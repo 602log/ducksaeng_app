@@ -2,7 +2,7 @@ import 'package:ducksaeng_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-/// custom app bar (main 용)
+/// custom app bar (main 용) 위젯
 class MainAppBarWidget extends StatelessWidget implements PreferredSizeWidget{
 
   @override

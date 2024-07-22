@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// 이벤트 리스트 아이템 카드 위젯
 class EventListItemWidget extends StatelessWidget {
   const EventListItemWidget({super.key});
 
