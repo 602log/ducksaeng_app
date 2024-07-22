@@ -34,19 +34,37 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: Colors.black,
             fontSize: 24,
+            overflow: TextOverflow.clip,
           ),
-          bodyMedium: TextStyle(
-            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
-            fontSize: 13,
+          titleMedium: TextStyle(
+            fontFamily: GoogleFonts.permanentMarker().fontFamily,
+            fontWeight: FontWeight.w500,
             color: Colors.black,
-            fontWeight: FontWeight.w400,
+            fontSize: 18,
+            overflow: TextOverflow.clip,
           ),
           titleSmall: TextStyle(
             fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
             fontWeight: FontWeight.w500,
             color: Colors.black,
             fontSize: 10,
+            overflow: TextOverflow.clip,
           ),
+          bodyLarge: TextStyle(
+            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
+            fontSize: 20,
+            color: Colors.black,
+            fontWeight: FontWeight.w400,
+            overflow: TextOverflow.clip,
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
+            fontSize: 13,
+            color: Colors.black,
+            fontWeight: FontWeight.w400,
+            overflow: TextOverflow.clip,
+          ),
+
 
         )
 
