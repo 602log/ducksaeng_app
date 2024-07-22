@@ -1,4 +1,5 @@
 import 'package:ducksaeng_app/view/components/event_list_item_widget.dart';
+import 'package:ducksaeng_app/view/components/search_and_navigation_bar_widget.dart';
 import 'package:ducksaeng_app/view/components/search_text_form_field_widget.dart';
 import 'package:ducksaeng_app/viewModel/event_controller.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,54 +21,9 @@ class EventListScreen extends GetView<EventController> {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(45),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5,
-                            offset: Offset(1, 3),
-                          ),
-                        ],
-                      ),
-                      child: IconButton(
-                        onPressed: () {
-                          Get.back();
-                        },
-                        icon: const Icon(
-                          Icons.arrow_back_ios_new,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(45),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 5,
-                              offset: Offset(1, 3),
-                            ),
-                          ],
-                        ),
-                        child: SearchTextFormFieldWidget(
-                          borderSide: BorderSide.none,
-                          callback: () {},
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+
+                SearchAndNavigationBarWidget(),
+
                 SizedBox(
                   height: 25,
                 ),
