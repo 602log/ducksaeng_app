@@ -9,7 +9,7 @@ class EventMapBottomItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         Get.toNamed(Routes.EVENT_DETAIL);
       },
       child: Container(
@@ -29,6 +29,23 @@ class EventMapBottomItem extends StatelessWidget {
         ),
         child: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.bookmark_border,
+                    size: 20,
+                  ),
+                  style: const ButtonStyle(
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                ),
+              ],
+            ),
             ClipRRect(
               borderRadius: const BorderRadius.all(
                 Radius.circular(100),
