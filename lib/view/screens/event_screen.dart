@@ -1,7 +1,6 @@
 import 'package:ducksaeng_app/routes/app_routes.dart';
 import 'package:ducksaeng_app/view/components/event_map_bottom_item.dart';
 import 'package:ducksaeng_app/view/components/search_and_navigation_bar_widget.dart';
-import 'package:ducksaeng_app/view/components/search_text_form_field_widget.dart';
 import 'package:ducksaeng_app/viewModel/event_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +36,7 @@ class EventScreen extends GetView<EventController> {
             ),
       
             // 생일 카페 이벤트 간략 내용 카드
-            Positioned(
+            const Positioned(
               bottom: kToolbarHeight - 20,
               right: 16,
               left: 16,

@@ -14,7 +14,7 @@ class ImageSliderWidget extends GetWidget<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(5.0),
+        margin: const EdgeInsets.all(5.0),
         child: ClipRRect(
           borderRadius: BorderRadius.all(
             Radius.circular(5.0),

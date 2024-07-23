@@ -30,41 +30,6 @@ class CustomButtomNavigationBar extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          // 이모티콘
-          // Icon(
-          //   Icons.home,
-          //   color: Colors.black,
-          // ),
-          // Icon(
-          //   Icons.cake,
-          //   color: Colors.black,
-          // ),
-          // Icon(
-          //   Icons.smart_button,
-          //   color: Colors.black,
-          // ),
-          // Icon(
-          //   Icons.favorite,
-          //   color: Colors.black,
-          // ),
-
-          // 글씨
-          // Text(
-          //   '홈',
-          //   style: Theme.of(context).textTheme.bodyMedium,
-          // ),
-          // Text(
-          //   '생일카페',
-          //   style: Theme.of(context).textTheme.bodyMedium,
-          // ),
-          // Text(
-          //   '생일광고',
-          //   style: Theme.of(context).textTheme.bodyMedium,
-          // ),
-          // Text(
-          //   '최애',
-          //   style: Theme.of(context).textTheme.bodyMedium,
-          // ),
 
           // 아이콘 + 글씨
           InkWell(
@@ -74,7 +39,7 @@ class CustomButtomNavigationBar extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.home,
                   color: Colors.black,
                 ),
@@ -92,7 +57,7 @@ class CustomButtomNavigationBar extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.cake,
                   color: Colors.black,
                 ),
@@ -106,7 +71,7 @@ class CustomButtomNavigationBar extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.smart_button,
                 color: Colors.black,
               ),
@@ -119,7 +84,7 @@ class CustomButtomNavigationBar extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.favorite,
                 color: Colors.black,
               ),
@@ -129,64 +94,6 @@ class CustomButtomNavigationBar extends StatelessWidget {
               ),
             ],
           ),
-
-          // 동그라미 + 이모티콘
-          // Container(
-          //   padding: EdgeInsets.all(5),
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(45),
-          //       border: Border.all(
-          //         color: Colors.black,
-          //         width: 1,
-          //       )
-          //   ),
-          //   child: Icon(
-          //     Icons.home,
-          //     color: Colors.black,
-          //   ),
-          // Container(
-          //   padding: EdgeInsets.all(5),
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(45),
-          //       border: Border.all(
-          //         color: Colors.black,
-          //         width: 1,
-          //       )
-          //   ),
-          //   child: Icon(
-          //     Icons.cake,
-          //     color: Colors.black,
-          //   ),
-          // ),
-          // Container(
-          //   padding: EdgeInsets.all(5),
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(45),
-          //       border: Border.all(
-          //         color: Colors.black,
-          //         width: 1,
-          //       )
-          //   ),
-          //   child: Icon(
-          //     Icons.smart_button,
-          //     color: Colors.black,
-          //   ),
-          // ),
-          //
-          // Container(
-          //   padding: EdgeInsets.all(5),
-          //   decoration: BoxDecoration(
-          //       borderRadius: BorderRadius.circular(45),
-          //       border: Border.all(
-          //         color: Colors.black,
-          //         width: 1,
-          //       )
-          //   ),
-          //   child: Icon(
-          //     Icons.cake,
-          //     color: Colors.black,
-          //   ),
-          // ),
         ],
       ),
     );

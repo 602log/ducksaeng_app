@@ -11,12 +11,12 @@ class EventListItemWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: InkWell(
-        onTap: (){
+        onTap: () {
           Get.toNamed(Routes.EVENT_DETAIL);
         },
         child: Container(
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.all(10),
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(
               Radius.circular(
@@ -25,9 +25,7 @@ class EventListItemWidget extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                  blurRadius: 10,
-                  color: Colors.grey,
-                  offset: Offset(0, 10))
+                  blurRadius: 10, color: Colors.grey, offset: Offset(0, 10))
             ],
           ),
           child: Row(
@@ -38,7 +36,7 @@ class EventListItemWidget extends StatelessWidget {
               Expanded(
                 flex: 4,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(10),
                   ),
                   child: Image.network(
@@ -48,64 +46,65 @@ class EventListItemWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 10,),
+              const SizedBox(
+                width: 10,
+              ),
               Expanded(
                 flex: 6,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment:
-                  MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       '츠키나가레오',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     Text(
                       '천재작곡가 레오의 연습실',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     Text(
                       '2024/10/17',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     Text(
                       '서울시 마포구',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
-
                     Wrap(
-                      spacing: 4.0, // 간격
-                      runSpacing: 5.0, // 줄간격
-                      direction: Axis.horizontal, // 나열 방향
+                      spacing: 4.0,
+                      // 간격
+                      runSpacing: 5.0,
+                      // 줄간격
+                      direction: Axis.horizontal,
+                      // 나열 방향
                       alignment: WrapAlignment.start,
-                      children: List.generate(6, (index) {
-                        return IntrinsicWidth(
-                          child: Container(
-                            padding: EdgeInsets.symmetric(vertical: 3, horizontal: 5,),
-                            decoration: BoxDecoration(
-                              color: Colors.amber,
-                              borderRadius: BorderRadius.all(Radius.circular(7),),
-                            ),
-                            child: Center(
-                              child: Text(
-                                '탁상 액자',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleSmall,
+                      children: List.generate(
+                        6,
+                        (index) {
+                          return IntrinsicWidth(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 3,
+                                horizontal: 5,
+                              ),
+                              decoration: const BoxDecoration(
+                                color: Colors.amber,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(7),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '탁상 액자',
+                                  style: Theme.of(context).textTheme.titleSmall,
+                                ),
                               ),
                             ),
-                          ),
-                        );
-                      },),
+                          );
+                        },
+                      ),
                     ),
                   ],
                 ),
@@ -117,7 +116,7 @@ class EventListItemWidget extends StatelessWidget {
                     alignment: Alignment.topRight,
                     child: InkWell(
                       onTap: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.bookmark_border,
                         size: 20,
                       ),

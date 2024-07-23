@@ -36,7 +36,7 @@ class EventMapBottomItem extends StatelessWidget {
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(),
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.bookmark_border,
                     size: 20,
                   ),

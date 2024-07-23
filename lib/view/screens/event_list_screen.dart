@@ -23,7 +23,7 @@ class EventListScreen extends GetView<EventController> {
 
                 SearchAndNavigationBarWidget(),
 
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
 
@@ -32,7 +32,7 @@ class EventListScreen extends GetView<EventController> {
                   child: ListView.builder(
                     itemCount: 20,
                     itemBuilder: (context, index) {
-                      return EventListItemWidget();
+                      return const EventListItemWidget();
                     },
                   ),
                 ),

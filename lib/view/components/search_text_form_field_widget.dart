@@ -30,20 +30,20 @@ class SearchTextFormFieldWidget extends GetWidget<HomeController> {
         labelText: '검색',
         labelStyle: Theme.of(context).textTheme.bodyMedium,
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(
+          borderRadius: const BorderRadius.all(
             Radius.circular(25.0),
           ),
             borderSide: borderSide,
         ),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.all(
+          borderRadius: const BorderRadius.all(
             Radius.circular(25.0),
           ),
           borderSide: borderSide,
         ),
 
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(25.0),
             ),
           borderSide: borderSide,

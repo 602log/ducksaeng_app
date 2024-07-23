@@ -26,7 +26,7 @@ class HomeScreen extends GetView<HomeController> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.grey.shade200,
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(90),
                       bottomRight: Radius.circular(90),
                     ),
