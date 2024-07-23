@@ -1,6 +1,5 @@
 import 'package:ducksaeng_app/view/components/event_list_item_widget.dart';
 import 'package:ducksaeng_app/view/components/search_and_navigation_bar_widget.dart';
-import 'package:ducksaeng_app/view/components/search_text_form_field_widget.dart';
 import 'package:ducksaeng_app/viewModel/event_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

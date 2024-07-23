@@ -16,90 +16,144 @@ class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return MediaQuery(
-      data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
-      child: Scaffold(
-        appBar: MainAppBarWidget(),
-        body: SafeArea(
-          child: Stack(
+        data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+        child: Scaffold(
+          appBar: MainAppBarWidget(),
+          body: Column(
             children: [
-              Column(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.yellow,
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(90),
-                            bottomRight: Radius.circular(90),
-                          ),
-                        ),
-                        child: Column(
-                          children: [
-
-                            // 최애 사진 슬라이더
-                            // todo: 최애 등록이 없는 경우 빈 칸 표출, 최애 사진 누르면 생일 리스트 조회 페이지로 이동
-                            Expanded(
-                              flex: 3,
-                              child: CarouselSlider(
-                                items: controller.imgWidget,
-                                options: CarouselOptions(
-                                  autoPlay: false,
-                                  enlargeCenterPage: true,
-                                  enableInfiniteScroll: false,
-                                ),
-                              ),
-                            ),
-
-                            const Expanded(
-                              flex: 1,
-                              child: SizedBox(),
-                            ),
-                          ],
-                        )),
-                  ),
-                  const Expanded(
-                    flex: 2,
-                    child: SizedBox(),
-                  ),
-                ],
-              ),
-
-              Column(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Row(
-                        children: [
-
-                          // 아이돌 서치 필드
-                          Expanded(
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 35.0),
-                              child: SearchTextFormFieldWidget(
-                                callback: () {},
-                              ),
-                            ),
-                          ),
-
-                        ],
-                      ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(90),
+                      bottomRight: Radius.circular(90),
                     ),
                   ),
-                  const Expanded(
-                    flex: 2,
-                    child: SizedBox(),
+                  child: Column(
+                    children: [
+                    Expanded(
+                      child: CarouselSlider(
+                          items: controller.imgWidget,
+                          options: CarouselOptions(
+                            autoPlay: false,
+                            enlargeCenterPage: true,
+                            enableInfiniteScroll: false,
+                              aspectRatio: 1
+                          ),
+                        ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 35,),
+                      child: SearchTextFormFieldWidget(
+                        callback: () {},
+                      ),
+                    ),
+                    ],
                   ),
-                ],
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                ),
               ),
             ],
           ),
-        ),
-        bottomNavigationBar: const CustomButtomNavigationBar(),
-      ),
+          bottomNavigationBar: const CustomButtomNavigationBar(),
+        )
     );
+
+
+    // return MediaQuery(
+    //   data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+    //   child: Scaffold(
+    //     appBar: MainAppBarWidget(),
+    //     body: SafeArea(
+    //       child: Stack(
+    //         children: [
+    //           Column(
+    //             children: [
+    //               Expanded(
+    //                 flex: 3,
+    //                 child: Container(
+    //                     decoration: BoxDecoration(
+    //                       color: Colors.grey.shade200,
+    //                       borderRadius: BorderRadius.only(
+    //                         bottomLeft: Radius.circular(90),
+    //                         bottomRight: Radius.circular(90),
+    //                       ),
+    //                     ),
+    //                     child: Column(
+    //                       crossAxisAlignment: CrossAxisAlignment.stretch,
+    //                       children: [
+    //
+    //                         // 최애 사진 슬라이더
+    //                         // todo: 최애 등록이 없는 경우 빈 칸 표출, 최애 사진 누르면 생일 리스트 조회 페이지로 이동
+    //                         Expanded(
+    //                           flex: 3,
+    //                           child: CarouselSlider(
+    //                             items: controller.imgWidget,
+    //                             options: CarouselOptions(
+    //                               autoPlay: false,
+    //                               enlargeCenterPage: true,
+    //                               enableInfiniteScroll: false,
+    //                                 aspectRatio: 16/20
+    //                             ),
+    //                           ),
+    //                         ),
+    //
+    //                         const Expanded(
+    //                           flex: 1,
+    //                           child: SizedBox(),
+    //                         ),
+    //                       ],
+    //                     )),
+    //               ),
+    //               const Expanded(
+    //                 flex: 2,
+    //                 child: SizedBox(),
+    //               ),
+    //             ],
+    //           ),
+    //
+    //           Column(
+    //             children: [
+    //               Expanded(
+    //                 flex: 3,
+    //                 child: Align(
+    //                   alignment: Alignment.bottomCenter,
+    //                   child: Row(
+    //                     children: [
+    //
+    //                       // 아이돌 서치 필드
+    //                       Expanded(
+    //                         child: Padding(
+    //                           padding:
+    //                               const EdgeInsets.symmetric(horizontal: 35.0),
+    //                           child: SearchTextFormFieldWidget(
+    //                             callback: () {},
+    //                           ),
+    //                         ),
+    //                       ),
+    //
+    //                     ],
+    //                   ),
+    //                 ),
+    //               ),
+    //               const Expanded(
+    //                 flex: 2,
+    //                 child: SizedBox(),
+    //               ),
+    //             ],
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //     bottomNavigationBar: const CustomButtomNavigationBar(),
+    //   ),
+    // );
   }
 }

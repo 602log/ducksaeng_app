@@ -19,12 +19,12 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
 
     // todo : 추후 삭제 예정
     imgList = [
-      'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
-      'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
-      'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
-      'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
-      'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
+      'https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMzAg/MDAxNjAwMzMxNTU5NzA3.G-oRFcjSLEaao9SvPRkLVBrfjwhOGDngTombKkYM3UQg.hHv2b_kHMCiIVcXygyOR1lddrT--nmmCvvunAD7vr6Eg.PNG.ms1084200/1600331558204.png?type=w800',
+      'https://img.gqkorea.co.kr/gq/2023/11/style_6563f59d3588d.jpg',
+      'https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMTkz/MDAxNjAwMzMxNTYyNzMw.ohYzDaVSRNWt3OXq2IJtZ9iUohyp7Icez-qcTHhIpbog.gY8MDfxc9ionOQdR1BNJLMkYG5xpMd9lRbgTyqbr5zgg.PNG.ms1084200/1600331561151.png?type=w800',
+      'https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMjk3/MDAxNjAwMzMxNTY1MDY1.H0syWuE7teorucB-FRiBYlhZ5ij0dF211gz3e3-Zr2Qg.9B4XFZSLoWkKboZnJmvnuxFfgg2YB23Udtu7jJ0z3tog.PNG.ms1084200/1600331562995.png?type=w800',
+      'https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfMjU2/MDAxNjAwMzMxNTY2MTkx.NnoMxLJ4X_nMqgfCAKu9YmdhpKku9RN8CegyEjcPpkUg.71gVBOZdJ3dEK_se62HBqTkWnD2luU0cQXNXIb-dxucg.PNG.ms1084200/1600331564541.png?type=w800',
+      'https://mblogthumb-phinf.pstatic.net/MjAyMDA5MTdfNTYg/MDAxNjAwMzMxNTY3NDM0.CXDtSNJFkCGskctHgZWjiTTbl3dZcRsODTJw63vnpwUg.a-NkKUSt-FGx0ab1XZgE5s-lBrNySh4MaVKMwmQ5feAg.PNG.ms1084200/1600331565684.png?type=w800',
     ];
     // tabController
   }
