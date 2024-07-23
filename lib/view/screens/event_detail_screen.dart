@@ -1,4 +1,6 @@
 import 'package:ducksaeng_app/view/components/custom_bottom_navigation_bar.dart';
+import 'package:ducksaeng_app/view/components/event_description_widget.dart';
+import 'package:ducksaeng_app/view/components/event_info_card_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -28,221 +30,43 @@ class EventDetailScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
-
             Column(
               children: [
-
                 Expanded(
                   // flex: 3,
-                  child: Container(
-                    child: PageView(
-                      controller: pageController,
-                      children: imgList
-                          .map(
-                            (e) => Image.network(
-                              e,
-                              fit: BoxFit.contain,
-                            ),
-                          )
-                          .toList(),
-                    ),
+                  child: PageView(
+                    controller: pageController,
+                    children: imgList
+                        .map(
+                          (e) => Image.network(
+                            e,
+                            fit: BoxFit.contain,
+                          ),
+                        )
+                        .toList(),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.grey.shade200,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30),
                       ),
                     ),
-                    padding: EdgeInsets.all(16),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 100,
-                                    ),
-                                    Container(
-                                      padding: EdgeInsets.all(10),
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(20),
-                                        ),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.grey,
-                                            blurRadius: 5,
-                                            offset: Offset(0, 2)
-                                          )
-                                        ],
-                                      ),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(100),
-                                            ),
-                                            child: Image.network(
-                                              'https://search.pstatic.net/sunny/?src=http%3A%2F%2Ffile3.instiz.net%2Fdata%2Fcached_img%2Fupload%2F2019%2F05%2F20%2F0%2F1c5716af0866ad9bed3d87e5f7664867.jpg&type=a340',
-                                              fit: BoxFit.cover,
-                                              height: 80,
-                                              width: 80,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Expanded(
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    '츠키나가 레오',
-                                                    style: Theme.of(context)
-                                                        .textTheme
-                                                        .titleMedium,
-                                                  ),
-                                                  Text(
-                                                    '앙상블 스타즈!',
-                                                    style: Theme.of(context)
-                                                        .textTheme
-                                                        .bodyMedium,
-                                                  ),
-                                                ],
-                                              ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Text(
-                                            'rt 해주시는 분들께 이벤트가 끝난 후 전체 특전 포함 소정의 선물을 보내드립니다!',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .bodyMedium,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                    padding: const EdgeInsets.all(16),
+                    child: const SingleChildScrollView(
 
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: Text('@아이디', style: Theme.of(context).textTheme.bodyMedium,),
-                          )
-                        ],
-                      ),
-                    ),
+                        // 이벤트 상세 내용 위젯
+                        child: EventDescriptionWidget()),
                   ),
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // center container
-                  Container(
-                    padding: EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 10,
-                        )
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Center(
-                          child: Text(
-                            '천재작곡가 레오의 연습실',
-                            style: Theme.of(context).textTheme.bodyLarge,
-                            overflow: TextOverflow.fade,
 
-                          ),
-                        ),
-                        Text(
-                          '논스케일드 갤러리',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        Text(
-                          '2024/10/17 ~ 2024/10/23',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        Text(
-                          '9:00 ~ 20:00',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        Text(
-                          '서울시 마포구 월드컵로 51, B1',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Wrap(
-                            spacing: 4,
-                            runSpacing: 4,
-                            children: List.generate(
-                              3,
-                              (index) {
-                                return IntrinsicWidth(
-                                  child: Center(
-                                    child: Container(
-                                      padding: EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(10),
-                                        ),
-                                        color: Colors.lime,
-                                      ),
-                                      child: Text(
-                                        '디자인컵',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleSmall,
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            // 이벤트 정보 카드 위젯
+            const EventInfoCardWidget(),
 
             Positioned(
               top: kToolbarHeight,
@@ -272,7 +96,6 @@ class EventDetailScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -286,9 +109,7 @@ class EventDetailScreen extends StatelessWidget {
                       ],
                     ),
                     child: IconButton(
-                      onPressed: () {
-
-                      },
+                      onPressed: () {},
                       icon: const Icon(
                         Icons.bookmark_border,
                       ),
@@ -303,7 +124,7 @@ class EventDetailScreen extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.grey.shade200,
           ),
-          child: CustomButtomNavigationBar(),
+          child: const CustomButtomNavigationBar(),
         ),
       ),
     );
