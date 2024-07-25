@@ -1,4 +1,5 @@
 import 'package:ducksaeng_app/view/components/bias_item_widget.dart';
+import 'package:ducksaeng_app/view/components/custom_bottom_navigation_bar.dart';
 import 'package:ducksaeng_app/view/components/search_and_navigation_bar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,15 +33,16 @@ class BiasListScreen extends GetView<BiasController> {
                   Wrap(
                     spacing: 10,
                     runSpacing: 4,
-                    children: controller.biasItems.entries.map((e) {
-                      return BiasItemWidget(name: e.key, url: e.value);
-                    }).toList()
+                    children: controller.biasItems.map((e) {
+                      return BiasItemWidget(name: e['name']!, url: e['url']!);
+                    }).toList(),
                   ),
                 ],
               ),
             ),
           ),
         ),
+        bottomNavigationBar: CustomButtomNavigationBar(),
       ),
     );
   }
