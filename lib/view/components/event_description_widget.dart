@@ -28,8 +28,7 @@ class EventDescriptionWidget extends StatelessWidget {
                         BoxShadow(
                             color: Colors.grey,
                             blurRadius: 5,
-                            offset: Offset(0, 2)
-                        )
+                            offset: Offset(0, 2))
                       ],
                     ),
                     child: Row(
@@ -55,17 +54,23 @@ class EventDescriptionWidget extends StatelessWidget {
                             children: [
                               Text(
                                 '츠키나가 레오',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleMedium,
+                                style: Theme.of(context).textTheme.titleMedium,
                               ),
                               Text(
                                 '앙상블 스타즈!',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyMedium,
+                                style: Theme.of(context).textTheme.bodyMedium,
                               ),
                             ],
+                          ),
+                        ),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.favorite_outline,
+                              size: 15,
+                            ),
+                          style: const ButtonStyle(
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                         ),
                       ],
@@ -79,9 +84,7 @@ class EventDescriptionWidget extends StatelessWidget {
                       Expanded(
                         child: Text(
                           'rt 해주시는 분들께 이벤트가 끝난 후 전체 특전 포함 소정의 선물을 보내드립니다!',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ),
                     ],
@@ -91,10 +94,12 @@ class EventDescriptionWidget extends StatelessWidget {
             ),
           ],
         ),
-
         Align(
           alignment: Alignment.bottomRight,
-          child: Text('@아이디', style: Theme.of(context).textTheme.bodyMedium,),
+          child: Text(
+            '@아이디',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
         )
       ],
     );
