@@ -51,7 +51,7 @@ class EventMapBottomItem extends StatelessWidget {
                 Radius.circular(100),
               ),
               child: Image.network(
-                'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80',
+                'https://pbs.twimg.com/media/FY-7c5kUUAEItMl?format=jpg&name=large',
                 fit: BoxFit.cover,
                 width: 120,
                 height: 120,
@@ -64,9 +64,24 @@ class EventMapBottomItem extends StatelessWidget {
               '츠키나가 레오',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
-            Text(
-              '천재작곡가 레오의 연습실',
-              style: Theme.of(context).textTheme.bodyMedium,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '천재작곡가 레오의 연습실',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+
+                const SizedBox(
+                  width: 5,
+                ),
+
+                const CircleAvatar(
+                  radius: 10,
+                  backgroundColor: Colors.yellow,
+                  child: Icon(Icons.check, size: 10,),
+                ),
+              ],
             ),
             Text(
               '2024/10/17',

@@ -64,8 +64,13 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w400,
             overflow: TextOverflow.clip,
           ),
-
-
+          bodySmall: TextStyle(
+            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
+            fontSize: 8,
+            color: Colors.black,
+            fontWeight: FontWeight.w400,
+            overflow: TextOverflow.clip,
+          ),
         )
 
 
