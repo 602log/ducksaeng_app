@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+/// 이벤트 상세 내용 화면
 class EventDetailScreen extends StatelessWidget {
   const EventDetailScreen({super.key});
 
