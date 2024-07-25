@@ -86,18 +86,23 @@ class CustomButtomNavigationBar extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(
-                Icons.favorite,
-                color: Colors.black,
-              ),
-              Text(
-                '최애',
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-            ],
+          InkWell(
+            onTap: (){
+              Get.toNamed(Routes.BIAST_LIST);
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.favorite,
+                  color: Colors.black,
+                ),
+                Text(
+                  '최애',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
           ),
         ],
       ),
