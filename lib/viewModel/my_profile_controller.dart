@@ -1,6 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class MyProfileController extends GetxController {
+
+  TextEditingController nickNameController = TextEditingController();
+  TextEditingController SNSAccount = TextEditingController();
 
 
   @override
@@ -17,4 +21,6 @@ class MyProfileController extends GetxController {
   void dispose() {
 
   }
+
+
 }
