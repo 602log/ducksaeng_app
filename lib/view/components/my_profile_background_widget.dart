@@ -1,8 +1,10 @@
+import 'package:ducksaeng_app/routes/app_routes.dart';
 import 'package:ducksaeng_app/view/components/my_profile_menu_widget.dart';
 import 'package:ducksaeng_app/view/components/my_profile_update_modal_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 /// 내정보 background 위젯 (stack 배경)
 class MyProfileBackgroundWidget extends StatelessWidget {
@@ -38,16 +40,19 @@ class MyProfileBackgroundWidget extends StatelessWidget {
                           color: Color(0x55C0C0C0),
                           child: Center(
                             child: Container(
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.all(15),
                               decoration: BoxDecoration(
+                                color: Colors.grey.shade300,
                                 borderRadius: BorderRadius.circular(50),
                                 border: Border.all(
                                   width: 1,
+                                  color: Colors.black54,
                                 ),
                               ),
                               child: Icon(
                                 Icons.camera_alt_outlined,
-                                size: 20,
+                                size: 25,
+                                color: Colors.black54,
                               ),
                             ),
                           ),
@@ -135,22 +140,31 @@ class MyProfileBackgroundWidget extends StatelessWidget {
                         ),
                       ),
                       MyProfileMenuWidget(
+                        iconWidget: Icon(Icons.cake),
                         title: '저장한 생일카페',
                         callback: () {},
                       ),
                       MyProfileMenuWidget(
+                        iconWidget: Icon(Icons.smart_button),
                         title: '저장한 생일광고',
                         callback: () {},
                       ),
                       MyProfileMenuWidget(
+                        iconWidget: Icon(Icons.add_circle_outline),
                         title: '내가 등록한 생일카페',
-                        callback: () {},
+                        callback: () {
+                          Get.toNamed(Routes.MY_EVENT_LIST);
+                        },
                       ),
                       MyProfileMenuWidget(
+                        iconWidget: Icon(Icons.add_circle),
                         title: '내가 등록한 생일광고',
-                        callback: () {},
+                        callback: () {
+                          Get.toNamed(Routes.MY_EVENT_LIST);
+                        },
                       ),
                       MyProfileMenuWidget(
+                        iconWidget: Icon(Icons.outbond),
                         title: '탈퇴',
                         callback: () {},
                       ),

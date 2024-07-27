@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 class MyProfileMenuWidget extends StatelessWidget {
   VoidCallback callback;
   String title;
+  Icon iconWidget;
 
   MyProfileMenuWidget({
     super.key,
     required this.callback,
     required this.title,
+    required this.iconWidget,
   });
 
   @override
@@ -29,17 +31,25 @@ class MyProfileMenuWidget extends StatelessWidget {
                     BoxShadow(
                       color: Colors.grey,
                       blurRadius: 3,
-                      offset: Offset(0, 4),
+                      spreadRadius: 1,
+                      offset: Offset(0, 3),
                     )
                   ],
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      title,
-                      style: Theme.of(context).textTheme.displayMedium,
+                    Row(
+                      children: [
+                        iconWidget,
+                        SizedBox(width: 10,),
+                        Text(
+                          title,
+                          style: Theme.of(context).textTheme.displayMedium,
+                        ),
+                      ],
                     ),
+
                     const Icon(
                       Icons.arrow_forward_ios,
                       size: 15,
