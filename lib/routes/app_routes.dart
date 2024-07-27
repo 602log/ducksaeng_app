@@ -12,4 +12,6 @@ class Routes {
   static const BIAST_LIST = '/bias_list';
   /// 내 프로필 페이지
   static const MY_PROFILE = '/my_profile';
+  /// 내가 등록한 생일 카페 리스트 페이지
+  static const MY_EVENT_LIST = '/my_event_list';
 }
