@@ -70,9 +70,7 @@ class MyEventListScreen extends GetView<MyEventController> {
 
               // 상단바 뒤로가기
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                ),
+                padding: const EdgeInsets.only(left: 16, right: 16, top: 10,),
                 child: Row(
                   children: [
                     Container(
