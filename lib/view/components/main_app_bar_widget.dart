@@ -57,7 +57,7 @@ class MainAppBarWidget extends StatelessWidget implements PreferredSizeWidget{
               IconButton(
                 padding: EdgeInsets.zero,
                 onPressed: () {
-
+                  Get.toNamed(Routes.MY_PROFILE);
                 },
                 icon: const Icon(
                   Icons.account_circle_outlined,

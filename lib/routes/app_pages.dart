@@ -1,12 +1,14 @@
 import 'package:ducksaeng_app/bindings/bias_binding.dart';
 import 'package:ducksaeng_app/bindings/event_binding.dart';
 import 'package:ducksaeng_app/bindings/home_binding.dart';
+import 'package:ducksaeng_app/bindings/my_profile_binding.dart';
 import 'package:ducksaeng_app/routes/app_routes.dart';
 import 'package:ducksaeng_app/view/screens/bias_list_screen.dart';
 import 'package:ducksaeng_app/view/screens/event_detail_screen.dart';
 import 'package:ducksaeng_app/view/screens/event_list_screen.dart';
 import 'package:ducksaeng_app/view/screens/event_screen.dart';
 import 'package:ducksaeng_app/view/screens/home_screen.dart';
+import 'package:ducksaeng_app/view/screens/my_profile_screen.dart';
 import 'package:get/get.dart';
 
 class AppPages {
@@ -19,21 +21,18 @@ class AppPages {
       name: Routes.HOME,
       page: () => HomeScreen(),
       binding: HomeBinding(),
-      transitionDuration: const Duration(microseconds: 300),
     ),
 
     GetPage(
       name: Routes.EVENT,
       page: () => EventScreen(),
       binding: EventBinding(),
-      transitionDuration: const Duration(microseconds: 300),
     ),
 
     GetPage(
       name: Routes.EVENT_LIST,
       page: () => EventListScreen(),
       binding: EventBinding(),
-      transitionDuration: const Duration(microseconds: 300),
     ),
 
     GetPage(
@@ -47,7 +46,12 @@ class AppPages {
       name: Routes.BIAST_LIST,
       page: () => BiasListScreen(),
       binding: BiasBinding(),
-      transitionDuration: const Duration(microseconds: 300),
+    ),
+
+    GetPage(
+      name: Routes.MY_PROFILE,
+      page: () => MyProfileScreen(),
+      binding: MyProfileBinding(),
     ),
   ];
 }
