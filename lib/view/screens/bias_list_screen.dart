@@ -31,7 +31,7 @@ class BiasListScreen extends GetView<BiasController> {
 
                   // bias item contianer
                   Wrap(
-                    spacing: 10,
+                    spacing: 30,
                     runSpacing: 4,
                     children: controller.biasItems.map((e) {
                       return BiasItemWidget(name: e['name']!, url: e['url']!);
