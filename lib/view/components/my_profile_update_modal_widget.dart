@@ -11,80 +11,73 @@ class MyProfileUpdateModalWidget extends GetView<MyProfileController> {
     return MediaQuery(
       data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
       child: Dialog(
-        child: Container(
-          // height: MediaQuery.of(context).size.height * 0.25,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-
-
-
-                TextFormField(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(30),),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextFormField(
+                style: Theme.of(context).textTheme.bodyMedium,
+                controller: controller.nickNameController,
+                decoration: InputDecoration(
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                  fillColor: Colors.white,
+                  labelText: '오타쿠잖슴',
+                  labelStyle: Theme.of(context).textTheme.bodyMedium,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    borderSide: BorderSide(width: 1),
+                  ),
+                  focusColor: Colors.black,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                style: Theme.of(context).textTheme.bodyMedium,
+                controller: controller.SNSAccount,
+                decoration: InputDecoration(
+                  prefixText: '@',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                  fillColor: Colors.white,
+                  labelText: '@otaku',
+                  labelStyle: Theme.of(context).textTheme.bodyMedium,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    borderSide: BorderSide(width: 1),
+                  ),
+                  focusColor: Colors.black,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                child: Text(
+                  '수정하기',
                   style: Theme.of(context).textTheme.bodyMedium,
-                  controller: controller.nickNameController,
-                  decoration: InputDecoration(
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                    fillColor: Colors.white,
-                    labelText: '오타쿠잖슴',
-                    labelStyle: Theme.of(context).textTheme.bodyMedium,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(15),
-                      ),
-                      borderSide: BorderSide(width: 1),
-                    ),
-                    focusColor: Colors.black,
-                  ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  style: Theme.of(context).textTheme.bodyMedium,
-                  controller: controller.SNSAccount,
-                  decoration: InputDecoration(
-                    prefixText: '@',
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                    fillColor: Colors.white,
-                    labelText: '@otaku',
-                    labelStyle: Theme.of(context).textTheme.bodyMedium,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(15),
-                      ),
-                      borderSide: BorderSide(width: 1),
-                    ),
-                    focusColor: Colors.black,
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                  child: Text(
-                    '수정하기',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
