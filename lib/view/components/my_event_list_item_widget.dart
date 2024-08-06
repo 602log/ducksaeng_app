@@ -37,40 +37,45 @@ class MyEventListItemWidget extends StatelessWidget {
                 ),
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+
+                children: [
+                  Container(
+                    width: 170,
+                    padding: EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.7),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '츠키나가레오',
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                        Text(
+                          '천재작곡가 레오의 연습실',
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                        Text(
+                          '2024/10/17',
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                        Text(
+                          '서울시 마포구',
+                          style: Theme.of(context).textTheme.displaySmall,
+                        ),
+                      ],
                     ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '츠키나가레오',
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                      Text(
-                        '천재작곡가 레오의 연습실',
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                      Text(
-                        '2024/10/17',
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                      Text(
-                        '서울시 마포구',
-                        style: Theme.of(context).textTheme.displaySmall,
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                ],
+              ),
             ),
           ),
         ],
