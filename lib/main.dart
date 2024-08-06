@@ -9,6 +9,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // 화면 회전 방지
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(const MyApp());
 }
 
@@ -77,6 +78,13 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             fontWeight: FontWeight.w400,
             overflow: TextOverflow.clip,
+          ),
+          displaySmall: TextStyle(
+            fontFamily: GoogleFonts.ibmPlexSansKr().fontFamily,
+            fontSize: 14,
+            color: Colors.black,
+            fontWeight: FontWeight.w500,
+            overflow: TextOverflow.ellipsis,
           ),
         )
 
